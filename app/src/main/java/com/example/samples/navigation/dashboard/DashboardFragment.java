@@ -1,4 +1,4 @@
-package com.example.samples.ui.dashboard;
+package com.example.samples.navigation.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,18 +12,17 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.samples.R;
 import com.example.samples.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
 
+
+    private static DashboardCallback callback;
     private DashboardViewModel dashboardViewModel;
     private FragmentDashboardBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        dashboardViewModel = new ViewModelProvider(this).get(DashboardViewModel.class);
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -42,5 +41,11 @@ public class DashboardFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    // установка методов обратного вызова, определенных в активности
+    // вызываются в этом фрагменте
+    public static void setCallback(DashboardCallback callback) {
+        DashboardFragment.callback = callback;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.samples.ui.home;
+package com.example.samples.navigation.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,18 +12,16 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.samples.R;
 import com.example.samples.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
+    private static HomeCallback callback;
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -42,5 +40,12 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+
+    // установка методов обратного вызова, определенных в активности
+    // вызываются в этом фрагменте
+    public static void setCallback(HomeCallback callback) {
+        HomeFragment.callback = callback;
     }
 }

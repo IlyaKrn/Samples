@@ -1,4 +1,4 @@
-package com.example.samples.ui.home;
+package com.example.samples.navigation.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

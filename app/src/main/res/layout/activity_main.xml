@@ -14,6 +14,12 @@
         android:layout_height="100dp"
         android:id="@+id/bt_show_sample_dialog"
         android:text="show sample dialog"/>
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/bt_go_to_nav"
+        android:text="go to navigation activity"/>
 
     <!--
     контейнер для диалога

@@ -1,4 +1,4 @@
-package com.example.samples.ui.notifications;
+package com.example.samples.navigation.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
