@@ -4,4 +4,16 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="always_use_this_account">Всегда использовать этот аккаунт</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="enter">Вход</string>
+    <string name="sign_in">Войти</string>
+    <string name="resend_varification_email">Повторить отправку</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="recycle_password">Повторите пароль</string>
+    <string name="user_family">Фамилия</string>
+    <string name="user_name">Имя</string>
+    <string name="registrarion">Регистрация</string>
+    <string name="forgot_password">Забыли пароль?</string>
 </resources>
